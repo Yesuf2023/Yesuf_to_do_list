@@ -11,4 +11,4 @@ A simple daily to-do list web app to help you avoid paper-and-pen notes and stay
 
 ## Run
 
-Open `/home/runner/work/Yesuf_to_do_list/Yesuf_to_do_list/index.html` in any modern browser.
+Open `index.html` from the project root in any modern browser.

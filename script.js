@@ -37,6 +37,10 @@ function renderTasks() {
     const completeButton = document.createElement("button");
     completeButton.className = "complete-btn";
     completeButton.textContent = task.completed ? "Undo" : "Done";
+    completeButton.setAttribute(
+      "aria-label",
+      task.completed ? `Mark "${task.text}" as not done` : `Mark "${task.text}" as done`
+    );
     completeButton.addEventListener("click", () => {
       const updated = loadTasks();
       updated[index].completed = !updated[index].completed;
@@ -47,6 +51,7 @@ function renderTasks() {
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-btn";
     deleteButton.textContent = "Delete";
+    deleteButton.setAttribute("aria-label", `Delete "${task.text}"`);
     deleteButton.addEventListener("click", () => {
       const updated = loadTasks();
       updated.splice(index, 1);
